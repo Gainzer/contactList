@@ -1,0 +1,31 @@
+<br><br><br><br>
+<p id="notice"><%= notice %></p>
+<br>
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @contact.number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contact.address %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @contact.info %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@contact.picture_url, :width => 600) if @contact.picture.present? %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
